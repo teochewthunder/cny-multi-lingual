@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=Lang.header["header"][cookies[:lang]]%></title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+         <div class="container">
+            <div class="header">
+                <div class="headertext left">
+                    <%=link_to Lang.header["header"][cookies[:lang]], controller: "welcome" %>!
+                </div>
+                <div class="nav right">
+                    <span class="lang">
+                      <%=Lang.labels["language"][cookies[:lang]]%> 
+                      <select name="ddlLang" onchange="changeLang(this.value)">
+                      <% Lang.allowedVals["languages"].each do |key, value|%>
+                          <option value="<%= key %>" <%= selectedLang(key) %>><%= value %></option>
+                      <% end %>
+                      </select>
+                    </span>
+                    <br />
+                    <%=link_to Lang.labels["dogyears"][cookies[:lang]], controller: "years" %> |
+                    <%=link_to Lang.labels["dogtraits"][cookies[:lang]], controller: "traits" %> |
+                    <%=link_to Lang.labels["dogfortune"][cookies[:lang]], controller: "fortune" %>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="content">
+                <%= yield %>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="footer">
+                <%=Lang.labels["tt"][cookies[:lang]]%> &copy; 2017
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body, html
+{
+	background-color:#FF0000;
+	color:#FFFF00;
+	font-size:16px;
+	font-family:arial,sans-serif;
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+.container 
+{
+	width:700px;
+	height:100%;
+	margin:0 auto 0 auto;
+	position:relative;
+	padding:5px;
+	background-color:rgba(0,0,0,0.5);
+	border-left:3px double #444400;
+	border-right:3px double #444400;
+}
+
+.content
+{
+	width:550px;
+	height:550px;
+	border-radius:50%;
+	background-color:rgba(255,100,0,0.3);
+	margin:10% auto 0 auto;
+}
+
+.content .left
+{
+	width:60%;
+	margin:10% -5% 0 -5%;
+}
+
+.content .right
+{
+	width:40%;
+	margin:10% -5% 0 -5%;
+}
+
+.header
+{
+	width:100%;
+}
+
+.nav, .headertext
+{
+	width:48%;
+}
+
+.nav
+{
+	text-align:right;
+}
+
+.headertext
+{
+	font-size:2.5em;
+	font-weight:bold;
+}
+
+.footer
+{
+	font-size:0.8em;
+	position:absolute;
+	top:95%;
+	left:5%;
+}
+
+.lang
+{
+	font-size:0.8em;
+}
+
+a:visited, a:link {color:#FFFF00;text-decoration: none;}
+a:hover, a:active {color:#FF4400;text-decoration: none;}
+
+.left {float:left;}
+.right {float:right;}
+.clearfix {clear:both;}
+
