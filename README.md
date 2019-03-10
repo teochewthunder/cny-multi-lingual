@@ -1,24 +1,18 @@
-# README
+# CNY Multilingual Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The format for this site is pretty standard MVC. What's *not* standard are the modifications to make this multilingual.
 
-Things you may want to cover:
+## Session
+A session variable is set, with default being "en". This will be changed whenever the value in the drop-down list is selected, which runs the *langs* route. The code in the *langs* route changes the Session variable to whatever value was selected in the drop-down list.
 
-* Ruby version
+## Helpers
+One helper is used to select the drop-down list depending on what the Session variable is at the moment.
 
-* System dependencies
+## Models
+Each model's content is a hash table, with text strings organized by keys named for the language (ie, "en" for English, "cn" for Chinese).
 
-* Configuration
+## Controllers
+Controllers use the Session variable to determine which string in the Model's hash table is used.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Views
+Views are dumb and don't do anything but display content dictated by their controllers.
