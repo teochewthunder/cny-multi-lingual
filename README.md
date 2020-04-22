@@ -3,7 +3,7 @@
 The format for this site is pretty standard MVC. What's *not* standard are the modifications to make this multilingual.
 
 ## Session
-A session variable is set, with default being "en". This will be changed whenever the value in the drop-down list is selected, which runs the *langs* route. The code in the *langs* route changes the Session variable to whatever value was selected in the drop-down list.
+A session variable is set, with default being "en". This will be changed whenever the value in the drop-down list is selected, which runs the `langs` route. The code in the `langs` route changes the Session variable to whatever value was selected in the drop-down list.
 
 ## Helpers
 One helper is used to select the drop-down list depending on what the Session variable is at the moment.
