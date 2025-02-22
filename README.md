@@ -17,4 +17,4 @@ Controllers use the Session variable to determine which string in the Model's ha
 ## Views
 Views are dumb and don't do anything but display content dictated by their controllers.
 
-**Note: This is an updated version from 2018. There may be some structural changes in Rails.**
+*Note: This is an updated version from 2018. There may be some structural changes in Rails.*
